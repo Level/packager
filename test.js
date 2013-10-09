@@ -1,11 +1,10 @@
-const test  = require('tape')
-    , fs    = require('fs')
+const fs    = require('fs')
     , path  = require('path')
     , os    = require('os')
 
 var location = path.join(os.tmpdir(), 'level-test-' + process.pid + '.db')
 
-module.exports = function (level) {
+module.exports = function (test, level) {
 
   test('test db open and use, level(location, cb)', function (t) {
     level(location, function (err, db) {
