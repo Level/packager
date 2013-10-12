@@ -1,7 +1,7 @@
 {
     "name"            : "level-packager"
   , "description"     : "LevelUP package helper for distributing with a LevelDOWN-compatible back-end"
-  , "version"         : "0.17.0-1"
+  , "version"         : "0.17.0-2"
   , "contributors"    : [
         "Rod Vagg <r@va.gg> (https://github.com/rvagg)"
       , "John Chesley <john@chesl.es> (https://github.com/chesles/)"
