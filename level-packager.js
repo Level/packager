@@ -14,13 +14,9 @@ function packager (leveldown) {
 
   [ 'destroy', 'repair' ].forEach(function (m) {
     if (typeof leveldown[m] == 'function') {
-      console.log('we have a', m)
       Level[m] = function (location, callback) {
         leveldown[m](location, callback || function () {})
       }
-    } else {
-      console.error('leveldown has no method:', m)
-      console.error(leveldown)
     }
   })
 
