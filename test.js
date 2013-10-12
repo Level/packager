@@ -4,7 +4,8 @@ const fs    = require('fs')
 
 var location = path.join(os.tmpdir(), 'level-test-' + process.pid + '.db')
 
-module.exports = function (test, level) {
+module.exports = function (test, level, options) {
+  options = options || {}
 
   test('test db open and use, level(location, cb)', function (t) {
     level(location, function (err, db) {
@@ -26,14 +27,16 @@ module.exports = function (test, level) {
     })
   })
 
-  // should use existing options object
-  test('test db open and use, level(location, options, cb) force error', function (t) {
-    level(location, { errorIfExists: true }, function (err, db) {
-      t.ok(err, 'got error opening existing db')
-      t.notOk(db, 'no db')
-      t.end()
+  if (!options.skipErrorIfExistsTest) {
+    // should use existing options object
+    test('test db open and use, level(location, options, cb) force error', function (t) {
+      level(location, { errorIfExists: true }, function (err, db) {
+        t.ok(err, 'got error opening existing db')
+        t.notOk(db, 'no db')
+        t.end()
+      })
     })
-  })
+  }
 
   test('test db open and use, db=level(location)', function (t) {
     var db = level(location)
@@ -46,6 +49,15 @@ module.exports = function (test, level) {
   test('test db values', function (t) {
     var c  = 0
       , db = level(location)
+      , setup = options.nonPersistent
+          ? function (callback) {
+              db.batch([
+                  { type: 'put', key: 'test1', value: 'success' }
+                , { type: 'put', key: 'test2', value: 'success' }
+                , { type: 'put', key: 'test3', value: 'success' }
+              ], callback)
+            }
+          : function (callback) { callback() }
 
     function read (err, value) {
       t.notOk(err, 'no error')
@@ -54,25 +66,32 @@ module.exports = function (test, level) {
         db.close(t.end.bind(t))
     }
 
-    db.get('test1', read)
-    db.get('test2', read)
-    db.get('test3', read)
-  })
-
-  test('test repair', function (t) {
-    t.plan(1)
-    level.repair(location, function (err) {
+    setup(function (err) {
       t.notOk(err, 'no error')
+      db.get('test1', read)
+      db.get('test2', read)
+      db.get('test3', read)
     })
   })
 
-  test('test destroy', function (t) {
-    t.plan(4)
-    t.ok(fs.statSync(location).isDirectory(), 'sanity check, directory exists')
-    t.ok(fs.existsSync(path.join(location, 'LOG')), 'sanity check, log exists')
-    level.destroy(location, function (err) {
-      t.notOk(err, 'no error')
-      t.notOk(fs.existsSync(path.join(location, 'LOG')), 'db gone (mostly)')
+  if (!options.skipRepairTest) {
+    test('test repair', function (t) {
+      t.plan(1)
+      level.repair(location, function (err) {
+        t.notOk(err, 'no error')
+      })
     })
-  })
+  }
+
+  if (!options.skipDestroyTest) {
+    test('test destroy', function (t) {
+      t.plan(4)
+      t.ok(fs.statSync(location).isDirectory(), 'sanity check, directory exists')
+      t.ok(fs.existsSync(path.join(location, 'LOG')), 'sanity check, log exists')
+      level.destroy(location, function (err) {
+        t.notOk(err, 'no error')
+        t.notOk(fs.existsSync(path.join(location, 'LOG')), 'db gone (mostly)')
+      })
+    })
+  }
 }
