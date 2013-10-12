@@ -1,8 +1,7 @@
 const fs    = require('fs')
     , path  = require('path')
-    , os    = require('os')
 
-var location = path.join(os.tmpdir(), 'level-test-' + process.pid + '.db')
+var location = path.join(__dirname, 'level-test-' + process.pid + '.db')
 
 module.exports = function (test, level, options) {
   options = options || {}
