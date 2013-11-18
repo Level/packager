@@ -1,7 +1,7 @@
 {
     "name"            : "level-packager"
   , "description"     : "LevelUP package helper for distributing with a LevelDOWN-compatible back-end"
-  , "version"         : "0.17.0-5"
+  , "version"         : "0.18.0"
   , "contributors"    : [
         "Rod Vagg <r@va.gg> (https://github.com/rvagg)"
       , "John Chesley <john@chesl.es> (https://github.com/chesles/)"
@@ -33,7 +33,7 @@
     ]
   , "main"            : "level-packager.js"
   , "dependencies"    : {
-        "levelup"         : "~0.17.0"
+        "levelup"         : "~0.18.0"
     }
   , "license"         : "MIT"
 }
