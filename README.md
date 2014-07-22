@@ -42,10 +42,10 @@ See the [CONTRIBUTING.md](https://github.com/Level/level/blob/master/CONTRIBUTIN
 </tbody></table>
 
 
-<a name="licence"></a>
-Licence &amp; copyright
+<a name="license"></a>
+License &amp; copyright
 -------------------
 
-Copyright (c) 2012-2013 **level-packager** contributors (listed above).
+Copyright (c) 2012-2014 **level-packager** contributors (listed above).
 
-**level-packager** is licensed under an MIT +no-false-attribs license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE file for more details.
+**level-packager** is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE.md file for more details.
