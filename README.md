@@ -1,7 +1,7 @@
 level-packager
 ==============
 
-![LevelDB Logo](https://twimg0-a.akamaihd.net/profile_images/3360574989/92fc472928b444980408147e5e5db2fa_bigger.png)
+<img alt="LevelDB Logo" height="100" src="http://leveldb.org/img/logo.svg">
 
 **LevelUP package helper for distributing with a LevelDOWN-compatible back-end**
 
@@ -46,6 +46,6 @@ See the [CONTRIBUTING.md](https://github.com/Level/level/blob/master/CONTRIBUTIN
 License &amp; copyright
 -------------------
 
-Copyright (c) 2012-2014 **level-packager** contributors (listed above).
+Copyright (c) 2012-2015 **level-packager** contributors (listed above).
 
 **level-packager** is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE.md file for more details.
