@@ -1,10 +1,11 @@
+const util    = require('util')
 const levelup = require('levelup')
 
 function packager (leveldown) {
   function Level (location, options, callback) {
-    if (typeof options == 'function')
+    if (util.isFunction(options)
       callback = options
-    if (typeof options != 'object')
+    if (!util.isObject(options))
       options  = {}
 
     options.db = leveldown
@@ -13,7 +14,7 @@ function packager (leveldown) {
   }
 
   [ 'destroy', 'repair' ].forEach(function (m) {
-    if (typeof leveldown[m] == 'function') {
+    if (util.isFunction(leveldown[m]) {
       Level[m] = function (location, callback) {
         leveldown[m](location, callback || function () {})
       }
