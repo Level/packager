@@ -1,7 +1,11 @@
+const util    = require('util')
 const levelup = require('levelup')
 
 function packager (leveldown) {
   function Level (location, options, callback) {
+    if (!(this instanceof Level))
+      return new Level(location, options, callback);
+
     if (typeof options == 'function')
       callback = options
     if (typeof options != 'object')
@@ -9,8 +13,9 @@ function packager (leveldown) {
 
     options.db = leveldown
 
-    return levelup(location, options, callback)
+    levelup.call(this, location, options, callback)
   }
+  util.inherits(Level, levelup);
 
   [ 'destroy', 'repair' ].forEach(function (m) {
     if (typeof leveldown[m] == 'function') {
