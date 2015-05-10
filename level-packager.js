@@ -13,7 +13,7 @@ function packager (leveldown) {
   }
 
   [ 'destroy', 'repair' ].forEach(function (m) {
-    if (typeof leveldown[m] === 'function')
+    if (typeof leveldown[m] === 'function') {
       Level[m] = function (location, callback) {
         leveldown[m](location, callback || function () {})
       }
