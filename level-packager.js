@@ -4,7 +4,7 @@ function packager (leveldown) {
   function Level (location, options, callback) {
     if (typeof options === 'function')
       callback = options
-    if (typeof options === 'object' && options !== null)
+    if (!(typeof options === 'object' && options !== null))
       options  = {}
 
     options.db = leveldown
