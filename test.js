@@ -94,3 +94,10 @@ module.exports = function (test, level, options) {
     })
   }
 }
+
+if (!module.parent) {
+  const test  = require('tape')
+      , level = require('level')
+
+  module.exports(test, level)
+}
