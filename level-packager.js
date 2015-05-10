@@ -3,7 +3,7 @@ const levelup = require('levelup')
 
 function packager (leveldown) {
   function Level (location, options, callback) {
-    if (util.isFunction(options)
+    if (util.isFunction(options))
       callback = options
     if (!util.isObject(options))
       options  = {}
