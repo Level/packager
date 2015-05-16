@@ -96,8 +96,9 @@ module.exports = function (test, level, options) {
 }
 
 if (!module.parent) {
-  const test  = require('tape')
-      , level = require('level')
+  const test      = require('tape')
+      , packager  = require('./')
+      , leveldown = require('leveldown')
 
-  module.exports(test, level)
+  module.exports(test, packager(leveldown))
 }
