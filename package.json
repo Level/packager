@@ -36,11 +36,11 @@
   ],
   "main": "level-packager.js",
   "dependencies": {
-    "levelup": "~1.0.0"
+    "levelup": "~1.2.0"
   },
   "license": "MIT",
   "devDependencies": {
-    "leveldown": "~1.0.6",
+    "leveldown": "~1.2.2",
     "tape": "^4.0.0"
   }
 }
