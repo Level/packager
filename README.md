@@ -7,8 +7,7 @@ level-packager
 
 [![NPM](https://nodei.co/npm/level-packager.png?stars&downloads)](https://nodei.co/npm/level-packager/) [![NPM](https://nodei.co/npm-dl/level-packager.png)](https://nodei.co/npm/level-packager/)
 
-[![Build Status](https://secure.travis-ci.org/Level/packager.png)](http://travis-ci.org/Level/packager)
-[![dependencies](https://david-dm.org/Level/packager.svg)](https://david-dm.org/level/packager)
+[![Build Status](https://secure.travis-ci.org/Level/packager.png)](http://travis-ci.org/Level/packager) [![dependencies](https://david-dm.org/Level/packager.svg)](https://david-dm.org/level/packager) [![Greenkeeper badge](https://badges.greenkeeper.io/Level/packager.svg)](https://greenkeeper.io/)
 
 **level-packager** exports single function which takes a single argument, a LevelDOWN-API compatible storage back-end for LevelUP. The function returns a constructor function that will bundle LevelUP with the given LevelDOWN replacement. The full API is supported, including all optional arguments, `repair()`, `delete()` and `copy()`. See **[level](https://github.com/Level/level)**, **[level-hyper](https://github.com/Level/level-hyper)** or **[level-lmdb](https://github.com/Level/level-lmdb)** as example use-cases.
 
