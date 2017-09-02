@@ -13,7 +13,7 @@ level-packager
 [![NPM](https://nodei.co/npm/level-packager.png?stars&downloads)](https://nodei.co/npm/level-packager/)
 [![NPM](https://nodei.co/npm-dl/level-packager.png)](https://nodei.co/npm/level-packager/)
 
-**level-packager** exports single function which takes a single argument, an `abstract-leveldown` compatible storage back-end for [`levelup`](https://github.com/Level/levelup). The function returns a constructor function that will bundle `levelup` with the given `abstract-leveldown` replacement. The full API is supported, including all optional arguments, `repair()`, `delete()` and `copy()`. Encoding functionality is provided by [`encoding-down`](https://github.com/Level/encoding-down).
+**level-packager** exports single function which takes a single argument, an `abstract-leveldown` compatible storage back-end for [`levelup`](https://github.com/Level/levelup). The function returns a constructor function that will bundle `levelup` with the given `abstract-leveldown` replacement. The full API is supported, including optional functions, `destroy()`, and `repair()`. Encoding functionality is provided by [`encoding-down`](https://github.com/Level/encoding-down).
 
 For example use-cases, see:
 
