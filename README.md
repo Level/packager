@@ -3,7 +3,7 @@ level-packager
 
 <img alt="LevelDB Logo" height="100" src="http://leveldb.org/img/logo.svg">
 
-**LevelUP package helper for distributing with a LevelDOWN-compatible back-end**
+> LevelUP package helper for distributing with a LevelDOWN-compatible back-end
 
 ![Node version](https://img.shields.io/badge/Node.js-%3E%3D6.0.0-orange.svg?style=flat-square)
 [![Build Status](https://secure.travis-ci.org/Level/packager.png)](http://travis-ci.org/Level/packager)
