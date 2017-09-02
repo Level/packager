@@ -5,7 +5,9 @@ level-packager
 
 **LevelUP package helper for distributing with a LevelDOWN-compatible back-end**
 
-[![NPM](https://nodei.co/npm/level-packager.png?stars&downloads)](https://nodei.co/npm/level-packager/) [![NPM](https://nodei.co/npm-dl/level-packager.png)](https://nodei.co/npm/level-packager/)
+![Node version](https://img.shields.io/badge/Node.js-%3E%3D6.0.0-orange.svg?style=flat-square)
+[![NPM](https://nodei.co/npm/level-packager.png?stars&downloads)](https://nodei.co/npm/level-packager/)
+[![NPM](https://nodei.co/npm-dl/level-packager.png)](https://nodei.co/npm/level-packager/)
 
 [![Build Status](https://secure.travis-ci.org/Level/packager.png)](http://travis-ci.org/Level/packager) [![dependencies](https://david-dm.org/Level/packager.svg)](https://david-dm.org/level/packager) [![Greenkeeper badge](https://badges.greenkeeper.io/Level/packager.svg)](https://greenkeeper.io/)
 
