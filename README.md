@@ -3,7 +3,7 @@ level-packager
 
 <img alt="LevelDB Logo" height="100" src="http://leveldb.org/img/logo.svg">
 
-> LevelUP package helper for distributing with a LevelDOWN-compatible back-end
+> `levelup` package helper for distributing with an `abstract-leveldown` compatible back-end
 
 ![Node version](https://img.shields.io/badge/Node.js-%3E%3D6.0.0-orange.svg?style=flat-square)
 [![Build Status](https://secure.travis-ci.org/Level/packager.png)](http://travis-ci.org/Level/packager)
@@ -13,7 +13,14 @@ level-packager
 [![NPM](https://nodei.co/npm/level-packager.png?stars&downloads)](https://nodei.co/npm/level-packager/)
 [![NPM](https://nodei.co/npm-dl/level-packager.png)](https://nodei.co/npm/level-packager/)
 
-**level-packager** exports single function which takes a single argument, a LevelDOWN-API compatible storage back-end for LevelUP. The function returns a constructor function that will bundle LevelUP with the given LevelDOWN replacement. The full API is supported, including all optional arguments, `repair()`, `delete()` and `copy()`. See **[level](https://github.com/Level/level)**, **[level-hyper](https://github.com/Level/level-hyper)** or **[level-lmdb](https://github.com/Level/level-lmdb)** as example use-cases.
+**level-packager** exports single function which takes a single argument, an `abstract-leveldown` compatible storage back-end for [`levelup`](https://github.com/Level/levelup). The function returns a constructor function that will bundle `levelup` with the given `abstract-leveldown` replacement. The full API is supported, including all optional arguments, `repair()`, `delete()` and `copy()`. Encoding functionality is provided by [`encoding-down`](https://github.com/Level/encoding-down).
+
+For example use-cases, see:
+
+* [`level`](https://github.com/Level/level)
+* [`level-mem`](https://github.com/Level/level-mem)
+* [`level-hyper`](https://github.com/Level/level-hyper)
+* [`level-lmdb`](https://github.com/Level/level-lmdb)
 
 Also available is a *test.js* file that can be used to verify that the user-package works as expected.
 
