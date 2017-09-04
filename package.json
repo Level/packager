@@ -36,11 +36,15 @@
   ],
   "main": "level-packager.js",
   "dependencies": {
-    "levelup": "~1.3.0"
+    "encoding-down": "~2.1.5",
+    "levelup": "2.0.0-rc1"
   },
   "license": "MIT",
   "devDependencies": {
     "leveldown": "^1.4.2",
     "tape": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
   }
 }

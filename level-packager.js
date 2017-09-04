@@ -1,15 +1,14 @@
 const levelup = require('levelup')
+const encode = require('encoding-down')
 
 function packager (leveldown) {
   function Level (location, options, callback) {
     if (typeof options === 'function')
       callback = options
-    if (!(typeof options === 'object' && options !== null))
+    if (typeof options !== 'object' || options === null)
       options  = {}
 
-    options.db = leveldown
-
-    return levelup(location, options, callback)
+    return levelup(encode(leveldown(location)), options, callback)
   }
 
   [ 'destroy', 'repair' ].forEach(function (m) {
