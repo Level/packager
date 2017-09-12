@@ -37,7 +37,7 @@
   "main": "level-packager.js",
   "dependencies": {
     "encoding-down": "~2.2.0",
-    "levelup": "2.0.0-rc1"
+    "levelup": "2.0.0-rc2"
   },
   "license": "MIT",
   "devDependencies": {
