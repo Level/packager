@@ -8,7 +8,6 @@
 [![Build Status](https://secure.travis-ci.org/Level/packager.png)](http://travis-ci.org/Level/packager)
 [![dependencies](https://david-dm.org/Level/packager.svg)](https://david-dm.org/level/packager)
 [![npm](https://img.shields.io/npm/dm/level-packager.svg)](https://www.npmjs.com/package/level-packager)
-[![Greenkeeper badge](https://badges.greenkeeper.io/Level/packager.svg)](https://greenkeeper.io/)
 
 **level-packager** exports single function which takes a single argument, an `abstract-leveldown` compatible storage back-end for [`levelup`](https://github.com/Level/levelup). The function returns a constructor function that will bundle `levelup` with the given `abstract-leveldown` replacement. The full API is supported, including optional functions, `destroy()`, and `repair()`. Encoding functionality is provided by [`encoding-down`](https://github.com/Level/encoding-down).
 
