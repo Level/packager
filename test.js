@@ -74,8 +74,7 @@ module.exports = function (test, level, options) {
   })
 
   test('options.keyEncoding and options.valueEncoding are passed on to encoding-down', function (t) {
-    var OPTS = { keyEncoding: 'json', valueEncoding: 'json' }
-    var db = level(location, OPTS)
+    var db = level(location, { keyEncoding: 'json', valueEncoding: 'json' })
     db.on('ready', function () {
       const codec = db.db.codec
       t.equal(codec.opts.keyEncoding, 'json', 'keyEncoding correct')
