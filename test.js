@@ -84,6 +84,16 @@ module.exports = function (test, level, options) {
     })
   })
 
+  test('encoding options default to utf8', function (t) {
+    var db = level(location)
+    db.on('ready', function () {
+      const codec = db.db.codec
+      t.equal(codec.opts.keyEncoding, 'utf8', 'keyEncoding correct')
+      t.equal(codec.opts.valueEncoding, 'utf8', 'valueEncoding correct')
+      db.close(t.end.bind(t))
+    })
+  })
+
   if (!options.skipRepairTest) {
     test('test repair', function (t) {
       t.plan(1)
