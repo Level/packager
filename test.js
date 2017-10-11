@@ -73,6 +73,17 @@ module.exports = function (test, level, options) {
     })
   })
 
+  test('options.keyEncoding and options.valueEncoding are passed on to encoding-down', function (t) {
+    var OPTS = { keyEncoding: 'json', valueEncoding: 'json' }
+    var db = level(location, OPTS)
+    db.on('ready', function () {
+      const codec = db.db.codec
+      t.equal(codec.opts.keyEncoding, 'json', 'keyEncoding correct')
+      t.equal(codec.opts.valueEncoding, 'json', 'valueEncoding correct')
+      db.close(t.end.bind(t))
+    })
+  })
+
   if (!options.skipRepairTest) {
     test('test repair', function (t) {
       t.plan(1)
