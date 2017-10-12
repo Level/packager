@@ -8,7 +8,7 @@ function packager (leveldown) {
     if (typeof options !== 'object' || options === null)
       options  = {}
 
-    return levelup(encode(leveldown(location)), options, callback)
+    return levelup(encode(leveldown(location), options), options, callback)
   }
 
   [ 'destroy', 'repair' ].forEach(function (m) {

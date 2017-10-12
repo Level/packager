@@ -73,6 +73,26 @@ module.exports = function (test, level, options) {
     })
   })
 
+  test('options.keyEncoding and options.valueEncoding are passed on to encoding-down', function (t) {
+    var db = level(location, { keyEncoding: 'json', valueEncoding: 'json' })
+    db.on('ready', function () {
+      var codec = db.db.codec
+      t.equal(codec.opts.keyEncoding, 'json', 'keyEncoding correct')
+      t.equal(codec.opts.valueEncoding, 'json', 'valueEncoding correct')
+      db.close(t.end.bind(t))
+    })
+  })
+
+  test('encoding options default to utf8', function (t) {
+    var db = level(location)
+    db.on('ready', function () {
+      var codec = db.db.codec
+      t.equal(codec.opts.keyEncoding, 'utf8', 'keyEncoding correct')
+      t.equal(codec.opts.valueEncoding, 'utf8', 'valueEncoding correct')
+      db.close(t.end.bind(t))
+    })
+  })
+
   if (!options.skipRepairTest) {
     test('test repair', function (t) {
       t.plan(1)
