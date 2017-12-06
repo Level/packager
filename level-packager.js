@@ -3,8 +3,12 @@ const encode = require('encoding-down')
 
 function packager (leveldown) {
   function Level (location, options, callback) {
-    if (typeof options === 'function') { callback = options }
-    if (typeof options !== 'object' || options === null) { options = {} }
+    if (typeof options === 'function') {
+      callback = options
+    }
+    if (typeof options !== 'object' || options === null) {
+      options = {}
+    }
 
     return levelup(encode(leveldown(location), options), options, callback)
   }
