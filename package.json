@@ -22,7 +22,7 @@
     "url": "https://github.com/Level/packager.git"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "standard && node test.js"
   },
   "homepage": "https://github.com/Level/packager",
   "keywords": [
@@ -42,6 +42,7 @@
   "license": "MIT",
   "devDependencies": {
     "leveldown": "^2.0.0",
+    "standard": "^10.0.3",
     "tape": "^4.0.0"
   },
   "engines": {
