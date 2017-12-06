@@ -45,7 +45,7 @@ module.exports = function (test, level, options) {
   })
 
   test('test db values', function (t) {
-    let c = 0
+    var c = 0
     const db = level(location)
     const setup = options.nonPersistent ? function (callback) {
       db.batch([
