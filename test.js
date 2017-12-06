@@ -1,3 +1,5 @@
+'use strict'
+
 const fs = require('fs')
 const path = require('path')
 const location = path.join(__dirname, 'level-test-' + process.pid + '.db')
@@ -45,7 +47,7 @@ module.exports = function (test, level, options) {
   })
 
   test('test db values', function (t) {
-    var c = 0
+    let c = 0
     const db = level(location)
     const setup = options.nonPersistent ? function (callback) {
       db.batch([
