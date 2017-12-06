@@ -1,5 +1,5 @@
-const fs    = require('fs')
-    , path  = require('path')
+const fs = require('fs'),
+  path = require('path')
 
 var location = path.join(__dirname, 'level-test-' + process.pid + '.db')
 
@@ -46,23 +46,22 @@ module.exports = function (test, level, options) {
   })
 
   test('test db values', function (t) {
-    var c  = 0
-      , db = level(location)
-      , setup = options.nonPersistent
+    var c = 0,
+      db = level(location),
+      setup = options.nonPersistent
           ? function (callback) {
-              db.batch([
-                  { type: 'put', key: 'test1', value: 'success' }
-                , { type: 'put', key: 'test2', value: 'success' }
-                , { type: 'put', key: 'test3', value: 'success' }
-              ], callback)
-            }
+            db.batch([
+                  { type: 'put', key: 'test1', value: 'success' },
+                 { type: 'put', key: 'test2', value: 'success' },
+                 { type: 'put', key: 'test3', value: 'success' }
+            ], callback)
+          }
           : function (callback) { callback() }
 
     function read (err, value) {
       t.notOk(err, 'no error')
       t.equal(value, 'success')
-      if (++c == 3)
-        db.close(t.end.bind(t))
+      if (++c == 3) { db.close(t.end.bind(t)) }
     }
 
     setup(function (err) {
@@ -116,9 +115,9 @@ module.exports = function (test, level, options) {
 }
 
 if (!module.parent) {
-  const test      = require('tape')
-      , packager  = require('./')
-      , leveldown = require('leveldown')
+  const test = require('tape'),
+    packager = require('./'),
+    leveldown = require('leveldown')
 
   module.exports(test, packager(leveldown))
 }
