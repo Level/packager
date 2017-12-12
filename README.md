@@ -10,7 +10,11 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![npm](https://img.shields.io/npm/dm/level-packager.svg)](https://www.npmjs.com/package/level-packager)
 
+## API
+
 Exports a single function which takes a single argument, an `abstract-leveldown` compatible storage back-end for [`levelup`](https://github.com/Level/levelup). The function returns a constructor function that will bundle `levelup` with the given `abstract-leveldown` replacement. The full API is supported, including optional functions, `destroy()`, and `repair()`. Encoding functionality is provided by [`encoding-down`](https://github.com/Level/encoding-down).
+
+The constructor function has a `.errors` property which provides access to the different error types from [`level-errors`](https://github.com/Level/errors#api).
 
 For example use-cases, see:
 
@@ -22,8 +26,7 @@ For example use-cases, see:
 Also available is a *test.js* file that can be used to verify that the user-package works as expected.
 
 <a name="contributing"></a>
-Contributing
-------------
+## Contributing
 
 `level-packager` is an **OPEN Open Source Project**. This means that:
 
@@ -32,8 +35,7 @@ Contributing
 See the [contribution guide](https://github.com/Level/community/blob/master/CONTRIBUTING.md) for more details.
 
 <a name="license"></a>
-License &amp; Copyright
--------------------
+## License &amp; Copyright
 
 Copyright (c) 2012-2017 `level-packager` [contributors](https://github.com/level/community#contributors).
 
