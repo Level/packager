@@ -7,6 +7,11 @@ const location = path.join(__dirname, 'level-test-' + process.pid + '.db')
 module.exports = function (test, level, options) {
   options = options || {}
 
+  test('Level constructor provides access to levelup errors', function (t) {
+    t.ok(level.errors, '.errors property set on constructor')
+    t.end()
+  })
+
   test('test db open and use, level(location, cb)', function (t) {
     level(location, function (err, db) {
       t.notOk(err, 'no error')

@@ -21,6 +21,8 @@ function packager (leveldown) {
     }
   })
 
+  Level.errors = levelup.errors
+
   return Level
 }
 
