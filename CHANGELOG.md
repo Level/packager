@@ -8,6 +8,7 @@
 ### Changed
 * Update `encoding-down` to `~4.0.0` (@ralphtheninja)
 * Update `leveldown` to `^3.0.0` (@ralphtheninja)
+* Update copyright year to 2018 (@ralphtheninja)
 
 ### Fixed
 * Test: clean up `level-test-*` dbs after tests are done (@ralphtheninja)
