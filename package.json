@@ -22,7 +22,7 @@
     "url": "https://github.com/Level/packager.git"
   },
   "scripts": {
-    "test": "standard && node test.js"
+    "test": "standard && node test.js && rm -rf level-test*"
   },
   "homepage": "https://github.com/Level/packager",
   "keywords": [
