@@ -42,7 +42,7 @@
   "license": "MIT",
   "devDependencies": {
     "leveldown": "^3.0.0",
-    "standard": "^10.0.3",
+    "standard": "^11.0.0",
     "tape": "^4.0.0"
   },
   "engines": {
