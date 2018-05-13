@@ -35,7 +35,7 @@ Also available is a *test.js* file that can be used to verify that the user-pack
 See the [contribution guide](https://github.com/Level/community/blob/master/CONTRIBUTING.md) for more details.
 
 <a name="license"></a>
-## License &amp; Copyright
+## License
 
 Copyright (c) 2012-2018 `level-packager` [contributors](https://github.com/level/community#contributors).
 
