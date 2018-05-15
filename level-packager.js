@@ -1,5 +1,5 @@
-const levelup = require('levelup')
-const encode = require('encoding-down')
+var levelup = require('levelup')
+var encode = require('encoding-down')
 
 function packager (leveldown) {
   function Level (location, options, callback) {
