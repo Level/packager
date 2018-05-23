@@ -25,6 +25,8 @@ For example use-cases, see:
 
 Also available is a *test.js* file that can be used to verify that the user-package works as expected.
 
+**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md).
+
 <a name="contributing"></a>
 ## Contributing
 
