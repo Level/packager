@@ -13,8 +13,8 @@
 * Update `encoding-down` to `~5.0.0` (@ralphtheninja)
 * Update `leveldown` to `^4.0.0` (@ralphtheninja)
 * Update `levelup` to `^3.0.0` (@ralphtheninja)
-* Change from `License & Copyright` to `License` in README (@ralphtheninja)
-* Replace `const` with `var` for IE10 support (#54) (@ralphtheninja)
+* Change `License & Copyright` to `License` in README (@ralphtheninja)
+* Replace `const` with `var` for IE10 support (@ralphtheninja)
 
 ### Fixed
 
