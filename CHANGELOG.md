@@ -2,6 +2,25 @@
 
 ## [Unreleased]
 
+## [3.0.0] - 2018-05-23
+
+### Added
+* Add node 10 to Travis (@ralphtheninja)
+* Add `UPGRADING.md` (@ralphtheninja)
+
+### Changed
+* Update `standard` to `^11.0.0` (@ralphtheninja)
+* Update `encoding-down` to `~5.0.0` (@ralphtheninja)
+* Update `leveldown` to `^4.0.0` (@ralphtheninja)
+* Update `levelup` to `^3.0.0` (@ralphtheninja)
+* Change from `License & Copyright` to `License` in README (@ralphtheninja)
+* Replace `const` with `var` for IE10 support (#54) (@ralphtheninja)
+
+### Fixed
+
+### Removed
+* Remove node 4 from Travis (@ralphtheninja)
+
 ## [2.1.1] - 2018-02-13
 
 ### Added
@@ -214,7 +233,8 @@
 
 :seedling: Initial release.
 
-[Unreleased]: https://github.com/level/packager/compare/v2.1.1...HEAD
+[Unreleased]: https://github.com/level/packager/compare/v3.0.0...HEAD
+[3.0.0]: https://github.com/level/packager/compare/v2.1.1...v3.0.0
 [2.1.1]: https://github.com/level/packager/compare/v2.1.0...v2.1.1
 [2.1.0]: https://github.com/level/packager/compare/v2.0.2...v2.1.0
 [2.0.2]: https://github.com/level/packager/compare/v2.0.1...v2.0.2
