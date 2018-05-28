@@ -32,21 +32,30 @@ module.exports = function (test, level, options) {
     })
   })
 
-  if (!options.skipErrorIfExistsTest) {
-    // should use existing options object
-    test('test db open and use, level(location, options, cb) force error', function (t) {
-      level(location, { errorIfExists: true }, function (err, db) {
-        t.ok(err, 'got error opening existing db')
-        t.notOk(db, 'no db')
-        t.end()
-      })
-    })
-  }
-
   test('test db open and use, db=level(location)', function (t) {
     var db = level(location)
     db.put('test3', 'success', function (err) {
       t.notOk(err, 'no error')
+      db.close(t.end.bind(t))
+    })
+  })
+
+  test('options.keyEncoding and options.valueEncoding are passed on to encoding-down', function (t) {
+    var db = level(location, { keyEncoding: 'json', valueEncoding: 'json' })
+    db.on('ready', function () {
+      var codec = db.db.codec
+      t.equal(codec.opts.keyEncoding, 'json', 'keyEncoding correct')
+      t.equal(codec.opts.valueEncoding, 'json', 'valueEncoding correct')
+      db.close(t.end.bind(t))
+    })
+  })
+
+  test('encoding options default to utf8', function (t) {
+    var db = level(location)
+    db.on('ready', function () {
+      var codec = db.db.codec
+      t.equal(codec.opts.keyEncoding, 'utf8', 'keyEncoding correct')
+      t.equal(codec.opts.valueEncoding, 'utf8', 'valueEncoding correct')
       db.close(t.end.bind(t))
     })
   })
@@ -76,25 +85,16 @@ module.exports = function (test, level, options) {
     })
   })
 
-  test('options.keyEncoding and options.valueEncoding are passed on to encoding-down', function (t) {
-    var db = level(location, { keyEncoding: 'json', valueEncoding: 'json' })
-    db.on('ready', function () {
-      var codec = db.db.codec
-      t.equal(codec.opts.keyEncoding, 'json', 'keyEncoding correct')
-      t.equal(codec.opts.valueEncoding, 'json', 'valueEncoding correct')
-      db.close(t.end.bind(t))
+  if (!options.skipErrorIfExistsTest) {
+    // should use existing options object
+    test('test db open and use, level(location, options, cb) force error', function (t) {
+      level(location, { errorIfExists: true }, function (err, db) {
+        t.ok(err, 'got error opening existing db')
+        t.notOk(db, 'no db')
+        t.end()
+      })
     })
-  })
-
-  test('encoding options default to utf8', function (t) {
-    var db = level(location)
-    db.on('ready', function () {
-      var codec = db.db.codec
-      t.equal(codec.opts.keyEncoding, 'utf8', 'keyEncoding correct')
-      t.equal(codec.opts.valueEncoding, 'utf8', 'valueEncoding correct')
-      db.close(t.end.bind(t))
-    })
-  })
+  }
 
   if (!options.skipRepairTest) {
     test('test repair', function (t) {
