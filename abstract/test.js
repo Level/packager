@@ -1,6 +1,5 @@
 'use strict'
 
-var fs = require('fs')
 var path = require('path')
 var location = path.join(__dirname, 'level-test-' + process.pid + '.db')
 
@@ -106,14 +105,6 @@ module.exports = function (test, level, options) {
   }
 
   if (!options.skipDestroyTest) {
-    test('test destroy', function (t) {
-      t.plan(4)
-      t.ok(fs.statSync(location).isDirectory(), 'sanity check, directory exists')
-      t.ok(fs.existsSync(path.join(location, 'LOG')), 'sanity check, log exists')
-      level.destroy(location, function (err) {
-        t.notOk(err, 'no error')
-        t.notOk(fs.existsSync(path.join(location, 'LOG')), 'db gone (mostly)')
-      })
-    })
+    require('./destroy-test')(test, level, location)
   }
 }

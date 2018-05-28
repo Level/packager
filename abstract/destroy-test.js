@@ -1,0 +1,14 @@
+var fs = require('fs')
+var path = require('path')
+
+module.exports = function (test, level, location) {
+  test('test destroy', function (t) {
+    t.plan(4)
+    t.ok(fs.statSync(location).isDirectory(), 'sanity check, directory exists')
+    t.ok(fs.existsSync(path.join(location, 'LOG')), 'sanity check, log exists')
+    level.destroy(location, function (err) {
+      t.notOk(err, 'no error')
+      t.notOk(fs.existsSync(path.join(location, 'LOG')), 'db gone (mostly)')
+    })
+  })
+}
