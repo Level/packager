@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [3.1.0] - 2018-05-28
+
+### Changed
+* Split up tests into `abstract/*-test.js` (@ralphtheninja)
+
+### Removed
+* Remove `.jshintrc` (@ralphtheninja)
+
 ## [3.0.0] - 2018-05-23
 
 ### Added
@@ -15,8 +23,6 @@
 * Update `levelup` to `^3.0.0` (@ralphtheninja)
 * Change `License & Copyright` to `License` in README (@ralphtheninja)
 * Replace `const` with `var` for IE10 support (@ralphtheninja)
-
-### Fixed
 
 ### Removed
 * Remove node 4 from Travis (@ralphtheninja)
@@ -233,7 +239,8 @@
 
 :seedling: Initial release.
 
-[Unreleased]: https://github.com/level/packager/compare/v3.0.0...HEAD
+[Unreleased]: https://github.com/level/packager/compare/v3.1.0...HEAD
+[3.1.0]: https://github.com/level/packager/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/level/packager/compare/v2.1.1...v3.0.0
 [2.1.1]: https://github.com/level/packager/compare/v2.1.0...v2.1.1
 [2.1.0]: https://github.com/level/packager/compare/v2.0.2...v2.1.0
