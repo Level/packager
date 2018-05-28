@@ -1,4 +1,6 @@
-module.exports = function (test, level, location) {
+var location = require('./location')
+
+module.exports = function (test, level) {
   test('Level constructor provides access to levelup errors', function (t) {
     t.ok(level.errors, '.errors property set on constructor')
     t.end()

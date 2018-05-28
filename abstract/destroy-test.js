@@ -1,7 +1,8 @@
 var fs = require('fs')
 var path = require('path')
+var location = require('./location')
 
-module.exports = function (test, level, location) {
+module.exports = function (test, level) {
   test('test destroy', function (t) {
     t.plan(4)
     t.ok(fs.statSync(location).isDirectory(), 'sanity check, directory exists')

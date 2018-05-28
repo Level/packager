@@ -1,4 +1,6 @@
-module.exports = function (test, level, nonPersistent, location) {
+var location = require('./location')
+
+module.exports = function (test, level, nonPersistent) {
   test('test db values', function (t) {
     let c = 0
     var db = level(location)
