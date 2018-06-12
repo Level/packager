@@ -3,6 +3,12 @@
 var test = require('tape')
 var packager = require('.')
 
+test('Level constructor has access to levelup errors', function (t) {
+  function Down () {}
+  t.ok(packager(Down).errors, '.errors property set on constructor')
+  t.end()
+})
+
 test('Level constructor relays .destroy if it exists', function (t) {
   t.plan(2)
   function Down () {}
