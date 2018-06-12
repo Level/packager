@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [4.0.0] - 2018-06-13
+
+### Changed
+* Rewrite `test.js` to test `level-packager` api (@ralphtheninja)
+
 ## [3.1.0] - 2018-05-28
 
 ### Changed
@@ -239,7 +244,8 @@
 
 :seedling: Initial release.
 
-[Unreleased]: https://github.com/level/packager/compare/v3.1.0...HEAD
+[Unreleased]: https://github.com/level/packager/compare/v4.0.0...HEAD
+[4.0.0]: https://github.com/level/packager/compare/v3.1.0...v4.0.0
 [3.1.0]: https://github.com/level/packager/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/level/packager/compare/v2.1.1...v3.0.0
 [2.1.1]: https://github.com/level/packager/compare/v2.1.0...v2.1.1
