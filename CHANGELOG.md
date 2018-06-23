@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## [4.0.1] - 2018-06-23
+
+### Changed
+
+-   Use `var` instead of `let` + `'use strict'` ([**@ralphtheninja**](https://github.com/ralphtheninja))
+
+### Added
+
+-   Add `remark` tooling ([**@ralphtheninja**](https://github.com/ralphtheninja))
+
+### Removed
+
+-   Remove `contributors` from `package.json` ([**@ralphtheninja**](https://github.com/ralphtheninja))
+
 ## [4.0.0] - 2018-06-13
 
 ### Changed
@@ -294,7 +308,9 @@
 
 :seedling: Initial release.
 
-[unreleased]: https://github.com/level/packager/compare/v4.0.0...HEAD
+[unreleased]: https://github.com/level/packager/compare/v4.0.1...HEAD
+
+[4.0.1]: https://github.com/level/packager/compare/v4.0.0...v4.0.1
 
 [4.0.0]: https://github.com/level/packager/compare/v3.1.0...v4.0.0
 
