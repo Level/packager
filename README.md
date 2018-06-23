@@ -27,7 +27,6 @@ Also available is a *test.js* file that can be used to verify that the user-pack
 
 **If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md).
 
-<a name="contributing"></a>
 ## Contributing
 
 `level-packager` is an **OPEN Open Source Project**. This means that:
@@ -36,11 +35,8 @@ Also available is a *test.js* file that can be used to verify that the user-pack
 
 See the [contribution guide](https://github.com/Level/community/blob/master/CONTRIBUTING.md) for more details.
 
-<a name="license"></a>
 ## License
 
-Copyright (c) 2012-present `level-packager` [contributors](https://github.com/level/community#contributors).
-
-`level-packager` is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included `LICENSE.md` file for more details.
+[MIT](./LICENSE.md) © 2013-present `level-packager` [Contributors](./CONTRIBUTORS.md).
 
 [level-badge]: http://leveldb.org/img/badge.svg
