@@ -6,11 +6,12 @@
 
 ### Changed
 
--   Use `var` instead of `let` + `'use strict'` ([**@ralphtheninja**](https://github.com/ralphtheninja))
+-   Use `var` instead of `let` ([**@ralphtheninja**](https://github.com/ralphtheninja))
 
 ### Added
 
 -   Add `remark` tooling ([**@ralphtheninja**](https://github.com/ralphtheninja))
+-   Add `'use strict'` to all abstract tests ([**@ralphtheninja**](https://github.com/ralphtheninja))
 
 ### Removed
 
