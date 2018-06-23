@@ -1,3 +1,5 @@
+'use strict'
+
 var location = require('./location')
 
 module.exports = function (test, level) {

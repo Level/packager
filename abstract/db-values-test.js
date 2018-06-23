@@ -1,8 +1,10 @@
+'use strict'
+
 var location = require('./location')
 
 module.exports = function (test, level, nonPersistent) {
   test('test db values', function (t) {
-    let c = 0
+    var c = 0
     var db = level(location)
     var setup = nonPersistent ? function (callback) {
       db.batch([
