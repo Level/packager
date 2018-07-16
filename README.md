@@ -7,6 +7,7 @@
 ![Node version](https://img.shields.io/node/v/level-packager.svg)
 [![Build Status](https://secure.travis-ci.org/Level/packager.png)](http://travis-ci.org/Level/packager)
 [![dependencies](https://david-dm.org/Level/packager.svg)](https://david-dm.org/level/packager)
+[![Coverage Status](https://coveralls.io/repos/github/Level/packager/badge.svg)](https://coveralls.io/github/Level/packager)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![npm](https://img.shields.io/npm/dm/level-packager.svg)](https://www.npmjs.com/package/level-packager)
 

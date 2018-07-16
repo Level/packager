@@ -1,2 +1,3 @@
 node_modules
 level-test-*
+.nyc_output/

@@ -29,7 +29,7 @@ test('Level constructor relays .repair if it exists', function (t) {
   packager(Down).repair('location')
 })
 
-test('Level constructor, default options', function (t) {
+test('Level constructor with default options', function (t) {
   t.plan(3)
   function Down (location) {
     t.is(location, 'location', 'location is correct')
@@ -42,7 +42,24 @@ test('Level constructor, default options', function (t) {
   t.is(levelup.options.valueEncoding, 'utf8')
 })
 
-test('Level constructor, custom options', function (t) {
+test('Level constructor with callback', function (t) {
+  t.plan(4)
+  function Down (location) {
+    t.is(location, 'location', 'location is correct')
+    return {
+      open: function (opts, cb) {
+        t.pass('open called')
+        process.nextTick(cb)
+      }
+    }
+  }
+  packager(Down)('location', function (err, db) {
+    t.error(err)
+    t.ok(db, 'db set in callback')
+  })
+})
+
+test('Level constructor with custom options', function (t) {
   t.plan(3)
   var Down = function (location) {
     t.is(location, 'location', 'location is correct')
