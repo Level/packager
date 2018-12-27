@@ -7,20 +7,12 @@
     "url": "https://github.com/Level/packager.git"
   },
   "scripts": {
-    "test": "standard && nyc node test.js",
+    "test": "standard && hallmark && nyc node test.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "remark": "remark README.md CHANGELOG.md CONTRIBUTORS.md UPGRADING.md -o"
+    "hallmark": "hallmark --fix"
   },
-  "remarkConfig": {
-    "plugins": [
-      [
-        "remark-git-contributors",
-        "level-community"
-      ],
-      [
-        "remark-github"
-      ]
-    ]
+  "hallmark": {
+    "community": "level-community"
   },
   "homepage": "https://github.com/Level/packager",
   "keywords": [
@@ -34,17 +26,15 @@
   ],
   "main": "level-packager.js",
   "dependencies": {
-    "encoding-down": "~6.0.0",
+    "encoding-down": "^6.0.0",
     "levelup": "^4.0.0"
   },
   "license": "MIT",
   "devDependencies": {
     "coveralls": "^3.0.2",
+    "hallmark": "^0.1.0",
     "level-community": "^3.0.0",
     "nyc": "^12.0.2",
-    "remark-cli": "^5.0.0",
-    "remark-git-contributors": "^0.2.2",
-    "remark-github": "^7.0.3",
     "standard": "^12.0.0",
     "tape": "^4.0.0"
   },

@@ -19,10 +19,10 @@ The constructor function has a `.errors` property which provides access to the d
 
 For example use-cases, see:
 
--   [`level`](https://github.com/Level/level)
--   [`level-mem`](https://github.com/Level/level-mem)
--   [`level-hyper`](https://github.com/Level/level-hyper)
--   [`level-lmdb`](https://github.com/Level/level-lmdb)
+- [`level`](https://github.com/Level/level)
+- [`level-mem`](https://github.com/Level/level-mem)
+- [`level-hyper`](https://github.com/Level/level-hyper)
+- [`level-lmdb`](https://github.com/Level/level-lmdb)
 
 Also available is a _test.js_ file that can be used to verify that the user-package works as expected.
 
