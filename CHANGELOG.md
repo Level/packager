@@ -2,6 +2,23 @@
 
 ## [Unreleased]
 
+## [5.0.0] - 2018-12-27
+
+### Changed
+
+- Upgrade `encoding-down` from `~5.0.0` to `^6.0.0` (#80, #81) (@vweevers)
+- Upgrade `levelup` from `^3.0.0` to `^4.0.0` (#79) (@ralphtheninja)
+- Upgrade `standard` devDependency from `^11.0.0` to `^12.0.0` (#74) (@ralphtheninja)
+- Replace `remark-cli` devDependency with `hallmark` (#81) (@vweevers)
+
+### Added
+
+- Add nyc and coveralls (#73) (@ralphtheninja)
+
+### Removed
+
+- Remove node 9 (29fdaf4) (@ralphtheninja)
+
 ## [4.0.1] - 2018-06-23
 
 ### Changed
@@ -309,7 +326,9 @@
 
 :seedling: Initial release.
 
-[unreleased]: https://github.com/level/packager/compare/v4.0.1...HEAD
+[unreleased]: https://github.com/level/packager/compare/v5.0.0...HEAD
+
+[5.0.0]: https://github.com/level/packager/compare/v4.0.1...v5.0.0
 
 [4.0.1]: https://github.com/level/packager/compare/v4.0.0...v4.0.1
 
