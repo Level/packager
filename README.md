@@ -30,14 +30,14 @@ Also available is a _test.js_ file that can be used to verify that the user-pack
 
 ## Contributing
 
-`level-packager` is an **OPEN Open Source Project**. This means that:
+[`Level/packager`](https://github.com/Level/packager) is an **OPEN Open Source Project**. This means that:
 
 > Individuals making significant and valuable contributions are given commit-access to the project to contribute as they see fit. This project is more like an open wiki than a standard guarded open source project.
 
-See the [contribution guide](https://github.com/Level/community/blob/master/CONTRIBUTING.md) for more details.
+See the [Contribution Guide](https://github.com/Level/community/blob/master/CONTRIBUTING.md) for more details.
 
 ## License
 
-[MIT](./LICENSE.md) © 2013-present `level-packager` [Contributors](./CONTRIBUTORS.md).
+[MIT](LICENSE.md) © 2013-present [Contributors](CONTRIBUTORS.md).
 
 [level-badge]: http://leveldb.org/img/badge.svg
