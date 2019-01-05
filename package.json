@@ -1,18 +1,32 @@
 {
   "name": "level-packager",
-  "description": "LevelUP package helper for distributing with a LevelDOWN-compatible back-end",
   "version": "5.0.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Level/packager.git"
-  },
+  "description": "LevelUP package helper for distributing with a LevelDOWN-compatible back-end",
+  "license": "MIT",
+  "main": "level-packager.js",
   "scripts": {
     "test": "standard && hallmark && nyc node test.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "hallmark": "hallmark --fix"
   },
+  "dependencies": {
+    "encoding-down": "^6.0.0",
+    "levelup": "^4.0.0"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "hallmark": "^0.1.0",
+    "level-community": "^3.0.0",
+    "nyc": "^12.0.2",
+    "standard": "^12.0.0",
+    "tape": "^4.0.0"
+  },
   "hallmark": {
     "community": "level-community"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Level/packager.git"
   },
   "homepage": "https://github.com/Level/packager",
   "keywords": [
@@ -24,20 +38,6 @@
     "storage",
     "json"
   ],
-  "main": "level-packager.js",
-  "dependencies": {
-    "encoding-down": "^6.0.0",
-    "levelup": "^4.0.0"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "coveralls": "^3.0.2",
-    "hallmark": "^0.1.0",
-    "level-community": "^3.0.0",
-    "nyc": "^12.0.2",
-    "standard": "^12.0.0",
-    "tape": "^4.0.0"
-  },
   "engines": {
     "node": ">=6"
   }
