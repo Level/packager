@@ -38,6 +38,6 @@ See the [contribution guide](https://github.com/Level/community/blob/master/CONT
 
 ## License
 
-[MIT](./LICENSE.md) © 2013-present `level-packager` [Contributors](./CONTRIBUTORS.md).
+[MIT](LICENSE.md) © 2013-present [Contributors](CONTRIBUTORS.md).
 
 [level-badge]: http://leveldb.org/img/badge.svg
