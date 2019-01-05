@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/Level/packager",
   "keywords": [
+    "level",
     "leveldb",
     "stream",
     "database",
