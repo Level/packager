@@ -2,11 +2,10 @@
 
 > `levelup` package helper for distributing with an `abstract-leveldown` compatible back-end
 
-[![level badge][level-badge]](https://github.com/level/awesome)
+[![level badge][level-badge]](https://github.com/Level/awesome)
 [![npm](https://img.shields.io/npm/v/level-packager.svg?label=&logo=npm)](https://www.npmjs.com/package/level-packager)
 [![Node version](https://img.shields.io/node/v/level-packager.svg)](https://www.npmjs.com/package/level-packager)
-[![Build Status](https://secure.travis-ci.org/Level/packager.png)](http://travis-ci.org/Level/packager)
-[![dependencies](https://david-dm.org/Level/packager.svg)](https://david-dm.org/level/packager)
+[![Travis](https://img.shields.io/travis/Level/packager.svg?logo=travis&label=)](https://travis-ci.org/Level/packager)
 [![Coverage Status](https://coveralls.io/repos/github/Level/packager/badge.svg)](https://coveralls.io/github/Level/packager)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![npm](https://img.shields.io/npm/dm/level-packager.svg?label=dl)](https://www.npmjs.com/package/level-packager)
