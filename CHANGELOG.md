@@ -2,6 +2,13 @@
 
 ## [Unreleased][unreleased]
 
+## [5.0.1] - 2019-03-31
+
+### Changed
+
+- Update `nyc` devDependency from `^12.0.2` to `^13.2.0` ([#84](https://github.com/Level/packager/issues/84)) ([**@vweevers**](https://github.com/vweevers))
+- Apply common project tweaks ([#82](https://github.com/Level/packager/issues/82), [#83](https://github.com/Level/packager/issues/83)) ([**@vweevers**](https://github.com/vweevers))
+
 ## [5.0.0] - 2018-12-27
 
 ### Changed
@@ -326,7 +333,9 @@
 
 :seedling: Initial release.
 
-[unreleased]: https://github.com/level/packager/compare/v5.0.0...HEAD
+[unreleased]: https://github.com/level/packager/compare/v5.0.1...HEAD
+
+[5.0.1]: https://github.com/level/packager/compare/v5.0.0...v5.0.1
 
 [5.0.0]: https://github.com/level/packager/compare/v4.0.1...v5.0.0
 
