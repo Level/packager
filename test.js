@@ -9,24 +9,27 @@ test('Level constructor has access to levelup errors', function (t) {
   t.end()
 })
 
-test('Level constructor relays .destroy if it exists', function (t) {
-  t.plan(2)
-  function Down () {}
-  Down.destroy = function (location, cb) {
-    t.is(location, 'location', 'location is correct')
-    t.is(typeof cb, 'function', 'cb is set')
-  }
-  packager(Down).destroy('location')
-})
+test('Level constructor relays .destroy and .repair if they exist', function (t) {
+  t.plan(8)
 
-test('Level constructor relays .repair if it exists', function (t) {
-  t.plan(2)
-  function Down () {}
-  Down.repair = function (location, cb) {
-    t.is(location, 'location', 'location is correct')
-    t.is(typeof cb, 'function', 'cb is set')
+  test('destroy')
+  test('repair')
+
+  function test (method) {
+    function Down () {}
+
+    Down[method] = function () {
+      t.same([].slice.call(arguments), args, 'supports variadic arguments')
+    }
+
+    var level = packager(Down)
+    var args = []
+
+    for (var i = 0; i < 4; i++) {
+      args.push(i)
+      level[method].apply(level, args)
+    }
   }
-  packager(Down).repair('location')
 })
 
 test('Level constructor with default options', function (t) {
