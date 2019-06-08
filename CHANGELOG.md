@@ -2,6 +2,23 @@
 
 ## [Unreleased][unreleased]
 
+## [5.0.2] - 2019-06-08
+
+### Changed
+
+- Upgrade `nyc` devDependency from `^13.2.0` to `^14.0.0` ([#85](https://github.com/Level/packager/issues/85)) ([**@vweevers**](https://github.com/vweevers))
+
+### Added
+
+- Add `.npmignore` ([`85b9a84`](https://github.com/Level/packager/commit/85b9a84)) ([**@vweevers**](https://github.com/vweevers))
+
+### Fixed
+
+- Support variadic arguments in `destroy()` and `repair()` ([#88](https://github.com/Level/packager/issues/88)) ([**@vweevers**](https://github.com/vweevers))
+- Don't assume existence of a `LOG` file in abstract `destroy-test` ([#87](https://github.com/Level/packager/issues/87)) ([**@vweevers**](https://github.com/vweevers))
+- Fix Level badge ([`2429718`](https://github.com/Level/packager/commit/2429718)) ([**@vweevers**](https://github.com/vweevers))
+- Remove link to dead website ([`d671d63`](https://github.com/Level/packager/commit/d671d63)) ([**@vweevers**](https://github.com/vweevers))
+
 ## [5.0.1] - 2019-03-31
 
 ### Changed
@@ -333,7 +350,9 @@
 
 :seedling: Initial release.
 
-[unreleased]: https://github.com/level/packager/compare/v5.0.1...HEAD
+[unreleased]: https://github.com/level/packager/compare/v5.0.2...HEAD
+
+[5.0.2]: https://github.com/level/packager/compare/v5.0.1...v5.0.2
 
 [5.0.1]: https://github.com/level/packager/compare/v5.0.0...v5.0.1
 
