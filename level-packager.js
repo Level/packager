@@ -13,7 +13,7 @@ function packager (leveldown) {
     return levelup(encode(leveldown(location), options), options, callback)
   }
 
-  [ 'destroy', 'repair' ].forEach(function (m) {
+  ['destroy', 'repair'].forEach(function (m) {
     if (typeof leveldown[m] === 'function') {
       Level[m] = function () {
         leveldown[m].apply(leveldown, arguments)
