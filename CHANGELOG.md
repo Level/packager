@@ -1,7 +1,5 @@
 # Changelog
 
-## [Unreleased][unreleased]
-
 ## [5.0.2] - 2019-06-08
 
 ### Changed
@@ -349,8 +347,6 @@
 ## 0.17.0 - 2013-10-09
 
 :seedling: Initial release.
-
-[unreleased]: https://github.com/level/packager/compare/v5.0.2...HEAD
 
 [5.0.2]: https://github.com/level/packager/compare/v5.0.1...v5.0.2
 
