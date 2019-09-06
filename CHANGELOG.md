@@ -306,6 +306,12 @@
 
 - Bumped version ([**@rvagg**](https://github.com/rvagg))
 
+## [0.17.0] - 2013-10-09
+
+:seedling: Initial release.
+
+**Historical Note** This changelog is ordered by semver-version, but the first few releases here did not use semver-valid tags.
+
 ## [0.17.0-5] - 2013-10-12
 
 ### Changed
@@ -338,15 +344,11 @@
 
 - README: `level` -> `level-packager` ([**@rvagg**](https://github.com/rvagg))
 
-## [0.17.0-1] - 2013-10-09
+## 0.17.0-1 - 2013-10-09
 
 ### Removed
 
 - Remove `tape` from devDependencies, allow callers to pass in custom test function ([**@rvagg**](https://github.com/rvagg))
-
-## 0.17.0 - 2013-10-09
-
-:seedling: Initial release.
 
 [5.0.2]: https://github.com/Level/packager/compare/v5.0.1...v5.0.2
 
@@ -404,7 +406,9 @@
 
 [0.19.0]: https://github.com/Level/packager/compare/0.18.0...v0.19.0
 
-[0.18.0]: https://github.com/Level/packager/compare/0.17.0-5...0.18.0
+[0.18.0]: https://github.com/Level/packager/compare/0.17.0...0.18.0
+
+[0.17.0]: https://github.com/Level/packager/compare/0.17.0-5...0.17.0
 
 [0.17.0-5]: https://github.com/Level/packager/compare/0.17.0-4...0.17.0-5
 
@@ -413,5 +417,3 @@
 [0.17.0-3]: https://github.com/Level/packager/compare/0.17.0-2...0.17.0-3
 
 [0.17.0-2]: https://github.com/Level/packager/compare/0.17.0-1...0.17.0-2
-
-[0.17.0-1]: https://github.com/Level/packager/compare/0.17.0...0.17.0-1
