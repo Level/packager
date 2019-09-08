@@ -1,5 +1,16 @@
 # Changelog
 
+## [5.0.3] - 2019-09-08
+
+### Changed
+
+- Upgrade `hallmark` devDependency from `^0.1.0` to `^2.0.0` ([#90](https://github.com/Level/packager/issues/90), [#93](https://github.com/Level/packager/issues/93)) ([**@vweevers**](https://github.com/vweevers))
+- Upgrade `standard` devDependency from `^12.0.0` to `^14.0.0` ([#89](https://github.com/Level/packager/issues/89), [#92](https://github.com/Level/packager/issues/92)) ([**@vweevers**](https://github.com/vweevers))
+
+### Fixed
+
+- Bump `levelup` and `encoding-down` to prevent dedupe ([`a293d30`](https://github.com/Level/packager/commit/a293d30)) ([**@vweevers**](https://github.com/vweevers))
+
 ## [5.0.2] - 2019-06-08
 
 ### Changed
@@ -349,6 +360,8 @@
 ### Removed
 
 - Remove `tape` from devDependencies, allow callers to pass in custom test function ([**@rvagg**](https://github.com/rvagg))
+
+[5.0.3]: https://github.com/Level/packager/compare/v5.0.2...v5.0.3
 
 [5.0.2]: https://github.com/Level/packager/compare/v5.0.1...v5.0.2
 
