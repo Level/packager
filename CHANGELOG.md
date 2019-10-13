@@ -1,5 +1,15 @@
 # Changelog
 
+## [5.1.0] - 2019-10-13
+
+### Added
+
+- Support constructing without location ([#95](https://github.com/Level/packager/issues/95)) ([**@vweevers**](https://github.com/vweevers))
+
+### Fixed
+
+- Bump `levelup` and `encoding-down` to prevent dedupe ([`cd22e66`](https://github.com/Level/packager/commit/cd22e66)) ([**@vweevers**](https://github.com/vweevers))
+
 ## [5.0.3] - 2019-09-08
 
 ### Changed
@@ -360,6 +370,8 @@
 ### Removed
 
 - Remove `tape` from devDependencies, allow callers to pass in custom test function ([**@rvagg**](https://github.com/rvagg))
+
+[5.1.0]: https://github.com/Level/packager/compare/v5.0.3...v5.1.0
 
 [5.0.3]: https://github.com/Level/packager/compare/v5.0.2...v5.0.3
 
