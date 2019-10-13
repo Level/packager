@@ -32,12 +32,40 @@ test('Level constructor relays .destroy and .repair if they exist', function (t)
   }
 })
 
-test('Level constructor with default options', function (t) {
+test('Level constructor', function (t) {
   t.plan(3)
+  function Down () {
+    return {
+      open: function (opts, cb) {
+        t.same(opts, {
+          createIfMissing: true,
+          errorIfExists: false,
+
+          // This is a side effect of encoding-down (mutating options)
+          keyEncoding: 'utf8',
+          valueEncoding: 'utf8'
+        })
+      }
+    }
+  }
+  var levelup = packager(Down)()
+  t.is(levelup.options.keyEncoding, 'utf8')
+  t.is(levelup.options.valueEncoding, 'utf8')
+})
+
+test('Level constructor with location', function (t) {
+  t.plan(4)
   function Down (location) {
     t.is(location, 'location', 'location is correct')
     return {
-      open: function (opts, cb) {}
+      open: function (opts, cb) {
+        t.same(opts, {
+          createIfMissing: true,
+          errorIfExists: false,
+          keyEncoding: 'utf8',
+          valueEncoding: 'utf8'
+        })
+      }
     }
   }
   var levelup = packager(Down)('location')
@@ -46,12 +74,38 @@ test('Level constructor with default options', function (t) {
 })
 
 test('Level constructor with callback', function (t) {
+  t.plan(3)
+  function Down () {
+    return {
+      open: function (opts, cb) {
+        t.same(opts, {
+          createIfMissing: true,
+          errorIfExists: false,
+          keyEncoding: 'utf8',
+          valueEncoding: 'utf8'
+        })
+        process.nextTick(cb)
+      }
+    }
+  }
+  packager(Down)(function (err, db) {
+    t.error(err)
+    t.ok(db, 'db set in callback')
+  })
+})
+
+test('Level constructor with location & callback', function (t) {
   t.plan(4)
   function Down (location) {
     t.is(location, 'location', 'location is correct')
     return {
       open: function (opts, cb) {
-        t.pass('open called')
+        t.same(opts, {
+          createIfMissing: true,
+          errorIfExists: false,
+          keyEncoding: 'utf8',
+          valueEncoding: 'utf8'
+        })
         process.nextTick(cb)
       }
     }
@@ -62,17 +116,72 @@ test('Level constructor with callback', function (t) {
   })
 })
 
-test('Level constructor with custom options', function (t) {
-  t.plan(3)
+test('Level constructor with location & options', function (t) {
+  t.plan(4)
   var Down = function (location) {
     t.is(location, 'location', 'location is correct')
     return {
-      open: function (opts, cb) {}
+      open: function (opts, cb) {
+        t.same(opts, {
+          createIfMissing: true,
+          errorIfExists: false,
+          keyEncoding: 'binary',
+          valueEncoding: 'binary'
+        })
+      }
     }
   }
   var levelup = packager(Down)('location', {
     keyEncoding: 'binary',
     valueEncoding: 'binary'
+  })
+  t.is(levelup.options.keyEncoding, 'binary')
+  t.is(levelup.options.valueEncoding, 'binary')
+})
+
+test('Level constructor with options', function (t) {
+  t.plan(3)
+  var Down = function () {
+    return {
+      open: function (opts, cb) {
+        t.same(opts, {
+          createIfMissing: true,
+          errorIfExists: false,
+          keyEncoding: 'binary',
+          valueEncoding: 'binary'
+        })
+      }
+    }
+  }
+  var levelup = packager(Down)({
+    keyEncoding: 'binary',
+    valueEncoding: 'binary'
+  })
+  t.is(levelup.options.keyEncoding, 'binary')
+  t.is(levelup.options.valueEncoding, 'binary')
+})
+
+test('Level constructor with options & callback', function (t) {
+  t.plan(5)
+  var Down = function () {
+    return {
+      open: function (opts, cb) {
+        t.same(opts, {
+          createIfMissing: true,
+          errorIfExists: false,
+          keyEncoding: 'binary',
+          valueEncoding: 'binary'
+        })
+        process.nextTick(cb)
+      }
+    }
+  }
+  var levelup = packager(Down)({
+    keyEncoding: 'binary',
+    valueEncoding: 'binary'
+  }, function (err, db) {
+    t.error(err)
+    t.ok(db, 'db set in callback')
   })
   t.is(levelup.options.keyEncoding, 'binary')
   t.is(levelup.options.valueEncoding, 'binary')
