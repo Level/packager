@@ -73,6 +73,22 @@ test('Level constructor with location', function (t) {
   t.is(levelup.options.valueEncoding, 'utf8')
 })
 
+test('Level constructor with location & options', function (t) {
+  t.plan(2)
+  function Down (location, opts) {
+    t.is(location, 'location', 'location is correct')
+    t.same(opts, {
+      prefix: 'foo'
+    })
+    return {
+      open: function (opts, cb) {
+        cb()
+      }
+    }
+  }
+  packager(Down)('location', { prefix: 'foo' })
+})
+
 test('Level constructor with callback', function (t) {
   t.plan(3)
   function Down () {
@@ -116,7 +132,7 @@ test('Level constructor with location & callback', function (t) {
   })
 })
 
-test('Level constructor with location & options', function (t) {
+test('Level constructor with location & options passed to levelup', function (t) {
   t.plan(4)
   var Down = function (location) {
     t.is(location, 'location', 'location is correct')
@@ -139,7 +155,7 @@ test('Level constructor with location & options', function (t) {
   t.is(levelup.options.valueEncoding, 'binary')
 })
 
-test('Level constructor with options', function (t) {
+test('Level constructor with options passed to levelup', function (t) {
   t.plan(3)
   var Down = function () {
     return {
@@ -161,7 +177,7 @@ test('Level constructor with options', function (t) {
   t.is(levelup.options.valueEncoding, 'binary')
 })
 
-test('Level constructor with options & callback', function (t) {
+test('Level constructor with options & callback passed to levelup', function (t) {
   t.plan(5)
   var Down = function () {
     return {

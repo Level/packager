@@ -13,7 +13,7 @@ function packager (leveldown) {
       options = isObject(location) ? location : {}
     }
 
-    return levelup(encode(leveldown(location), options), options, callback)
+    return levelup(encode(leveldown(location, options), options), options, callback)
   }
 
   function isObject (o) {
