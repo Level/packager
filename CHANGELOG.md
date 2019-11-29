@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.1.1] - 2019-11-29
+
+### Fixed
+
+- Pass options to `abstract-leveldown` store ([#96](https://github.com/Level/packager/issues/96)) ([**@achingbrain**](https://github.com/achingbrain)). In addition to passing options to the `levelup` wrapper.
+
 ## [5.1.0] - 2019-10-13
 
 ### Added
@@ -370,6 +376,8 @@
 ### Removed
 
 - Remove `tape` from devDependencies, allow callers to pass in custom test function ([**@rvagg**](https://github.com/rvagg))
+
+[5.1.1]: https://github.com/Level/packager/compare/v5.1.0...v5.1.1
 
 [5.1.0]: https://github.com/Level/packager/compare/v5.0.3...v5.1.0
 
