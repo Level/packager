@@ -215,8 +215,6 @@
 
 - Travis: remove 0.12, 4, 5 and 7 ([**@ralphtheninja**](https://github.com/ralphtheninja))
 
-### Fixed
-
 ## [1.2.1] - 2016-12-27
 
 ### Added
