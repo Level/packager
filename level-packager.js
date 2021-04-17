@@ -1,5 +1,7 @@
-var levelup = require('levelup')
-var encode = require('encoding-down')
+'use strict'
+
+const levelup = require('levelup')
+const encode = require('encoding-down')
 
 function packager (leveldown) {
   function Level (location, options, callback) {
@@ -20,13 +22,13 @@ function packager (leveldown) {
     return typeof o === 'object' && o !== null
   }
 
-  ['destroy', 'repair'].forEach(function (m) {
+  for (const m of ['destroy', 'repair']) {
     if (typeof leveldown[m] === 'function') {
-      Level[m] = function () {
-        leveldown[m].apply(leveldown, arguments)
+      Level[m] = function (...args) {
+        leveldown[m](...args)
       }
     }
-  })
+  }
 
   Level.errors = levelup.errors
 

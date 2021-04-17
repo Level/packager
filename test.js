@@ -1,7 +1,7 @@
 'use strict'
 
-var test = require('tape')
-var packager = require('.')
+const test = require('tape')
+const packager = require('.')
 
 test('Level constructor has access to levelup errors', function (t) {
   function Down () {}
@@ -18,16 +18,16 @@ test('Level constructor relays .destroy and .repair if they exist', function (t)
   function test (method) {
     function Down () {}
 
-    Down[method] = function () {
-      t.same([].slice.call(arguments), args, 'supports variadic arguments')
+    Down[method] = function (...actual) {
+      t.same(actual, expected, 'supports variadic arguments')
     }
 
-    var level = packager(Down)
-    var args = []
+    const level = packager(Down)
+    const expected = []
 
-    for (var i = 0; i < 4; i++) {
-      args.push(i)
-      level[method].apply(level, args)
+    for (let i = 0; i < 4; i++) {
+      expected.push(i)
+      level[method](...expected)
     }
   }
 })
@@ -48,7 +48,7 @@ test('Level constructor', function (t) {
       }
     }
   }
-  var levelup = packager(Down)()
+  const levelup = packager(Down)()
   t.is(levelup.options.keyEncoding, 'utf8')
   t.is(levelup.options.valueEncoding, 'utf8')
 })
@@ -68,7 +68,7 @@ test('Level constructor with location', function (t) {
       }
     }
   }
-  var levelup = packager(Down)('location')
+  const levelup = packager(Down)('location')
   t.is(levelup.options.keyEncoding, 'utf8')
   t.is(levelup.options.valueEncoding, 'utf8')
 })
@@ -134,7 +134,7 @@ test('Level constructor with location & callback', function (t) {
 
 test('Level constructor with location & options passed to levelup', function (t) {
   t.plan(4)
-  var Down = function (location) {
+  const Down = function (location) {
     t.is(location, 'location', 'location is correct')
     return {
       open: function (opts, cb) {
@@ -147,7 +147,7 @@ test('Level constructor with location & options passed to levelup', function (t)
       }
     }
   }
-  var levelup = packager(Down)('location', {
+  const levelup = packager(Down)('location', {
     keyEncoding: 'binary',
     valueEncoding: 'binary'
   })
@@ -157,7 +157,7 @@ test('Level constructor with location & options passed to levelup', function (t)
 
 test('Level constructor with options passed to levelup', function (t) {
   t.plan(3)
-  var Down = function () {
+  const Down = function () {
     return {
       open: function (opts, cb) {
         t.same(opts, {
@@ -169,7 +169,7 @@ test('Level constructor with options passed to levelup', function (t) {
       }
     }
   }
-  var levelup = packager(Down)({
+  const levelup = packager(Down)({
     keyEncoding: 'binary',
     valueEncoding: 'binary'
   })
@@ -179,7 +179,7 @@ test('Level constructor with options passed to levelup', function (t) {
 
 test('Level constructor with options & callback passed to levelup', function (t) {
   t.plan(5)
-  var Down = function () {
+  const Down = function () {
     return {
       open: function (opts, cb) {
         t.same(opts, {
@@ -192,7 +192,7 @@ test('Level constructor with options & callback passed to levelup', function (t)
       }
     }
   }
-  var levelup = packager(Down)({
+  const levelup = packager(Down)({
     keyEncoding: 'binary',
     valueEncoding: 'binary'
   }, function (err, db) {

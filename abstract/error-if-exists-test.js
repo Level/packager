@@ -1,6 +1,6 @@
 'use strict'
 
-var location = require('./location')
+const location = require('./location')
 
 module.exports = function (test, level) {
   test('test db open and use, level(location, options, cb) force error', function (t) {

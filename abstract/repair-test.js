@@ -1,6 +1,6 @@
 'use strict'
 
-var location = require('./location')
+const location = require('./location')
 
 module.exports = function (test, level) {
   test('test repair', function (t) {

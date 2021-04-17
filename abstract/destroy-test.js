@@ -1,8 +1,8 @@
 'use strict'
 
-var fs = require('fs')
-var path = require('path')
-var location = require('./location')
+const fs = require('fs')
+const path = require('path')
+const location = require('./location')
 
 module.exports = function (test, level) {
   test('test destroy', function (t) {

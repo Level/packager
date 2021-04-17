@@ -1,18 +1,20 @@
 'use strict'
 
-var location = require('./location')
+const location = require('./location')
 
 module.exports = function (test, level, nonPersistent) {
   test('test db values', function (t) {
-    var c = 0
-    var db = level(location)
-    var setup = nonPersistent ? function (callback) {
-      db.batch([
-        { type: 'put', key: 'test1', value: 'success' },
-        { type: 'put', key: 'test2', value: 'success' },
-        { type: 'put', key: 'test3', value: 'success' }
-      ], callback)
-    } : function (callback) { callback() }
+    let c = 0
+    const db = level(location)
+    const setup = nonPersistent
+      ? function (callback) {
+          db.batch([
+            { type: 'put', key: 'test1', value: 'success' },
+            { type: 'put', key: 'test2', value: 'success' },
+            { type: 'put', key: 'test3', value: 'success' }
+          ], callback)
+        }
+      : function (callback) { callback() }
 
     function read (err, value) {
       t.notOk(err, 'no error')
