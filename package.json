@@ -21,8 +21,8 @@
     "UPGRADING.md"
   ],
   "dependencies": {
-    "encoding-down": "^6.3.0",
-    "levelup": "^4.3.2"
+    "encoding-down": "^7.0.0",
+    "levelup": "^5.0.0"
   },
   "devDependencies": {
     "airtap": "^4.0.3",
