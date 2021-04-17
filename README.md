@@ -1,6 +1,6 @@
 # level-packager
 
-> `levelup` package helper for distributing with an `abstract-leveldown` compatible back-end
+> `levelup` package helper for distributing with an `abstract-leveldown` store.
 
 [![level badge][level-badge]](https://github.com/Level/awesome)
 [![npm](https://img.shields.io/npm/v/level-packager.svg?label=&logo=npm)](https://www.npmjs.com/package/level-packager)

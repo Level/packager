@@ -1,7 +1,7 @@
 {
   "name": "level-packager",
   "version": "5.1.1",
-  "description": "LevelUP package helper for distributing with a LevelDOWN-compatible back-end",
+  "description": "levelup package helper for distributing with an abstract-leveldown store",
   "license": "MIT",
   "main": "level-packager.js",
   "scripts": {
@@ -11,6 +11,14 @@
     "dependency-check": "dependency-check . test.js abstract/*.js",
     "prepublishOnly": "npm run dependency-check"
   },
+  "files": [
+    "abstract",
+    "level-packager.js",
+    "CHANGELOG.md",
+    "CONTRIBUTORS.md",
+    "LICENSE.md",
+    "UPGRADING.md"
+  ],
   "dependencies": {
     "encoding-down": "^6.3.0",
     "levelup": "^4.3.2"
