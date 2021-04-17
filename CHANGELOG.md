@@ -1,5 +1,19 @@
 # Changelog
 
+_**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md)._
+
+## [6.0.0] - 2021-04-17
+
+### Changed
+
+- **Breaking:** modernize syntax and bump `standard` ([Level/community#98](https://github.com/Level/community/issues/98)) ([`4770d17`](https://github.com/Level/packager/commit/4770d17)) (Vincent Weevers)
+- **Breaking:** bump `levelup` and `encoding-down` ([`c92e054`](https://github.com/Level/packager/commit/c92e054)) (Vincent Weevers)
+- Add `files` to `package.json` ([`809fb8e`](https://github.com/Level/packager/commit/809fb8e)) (Vincent Weevers)
+
+### Removed
+
+- **Breaking:** drop node 6 and 8 ([Level/community#98](https://github.com/Level/community/issues/98)) ([`5fd4a37`](https://github.com/Level/packager/commit/5fd4a37)) (Vincent Weevers)
+
 ## [5.1.1] - 2019-11-29
 
 ### Fixed
@@ -374,6 +388,8 @@
 ### Removed
 
 - Remove `tape` from devDependencies, allow callers to pass in custom test function ([**@rvagg**](https://github.com/rvagg))
+
+[6.0.0]: https://github.com/Level/packager/compare/v5.1.1...v6.0.0
 
 [5.1.1]: https://github.com/Level/packager/compare/v5.1.0...v5.1.1
 
