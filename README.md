@@ -5,8 +5,9 @@
 [![level badge][level-badge]](https://github.com/Level/awesome)
 [![npm](https://img.shields.io/npm/v/level-packager.svg?label=&logo=npm)](https://www.npmjs.com/package/level-packager)
 [![Node version](https://img.shields.io/node/v/level-packager.svg)](https://www.npmjs.com/package/level-packager)
-[![Travis](https://img.shields.io/travis/com/Level/packager.svg?logo=travis&label=)](https://travis-ci.com/Level/packager)
-[![Coverage Status](https://coveralls.io/repos/github/Level/packager/badge.svg)](https://coveralls.io/github/Level/packager)
+[![Test](https://github.com/Level/packager/actions/workflows/test.yml/badge.svg)](https://github.com/Level/packager/actions/workflows/test.yml)
+[![Coverage Status](https://codecov.io/gh/Level/packager/branch/master/graph/badge.svg)](https://codecov.io/gh/Level/packager)
+
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![npm](https://img.shields.io/npm/dm/level-packager.svg?label=dl)](https://www.npmjs.com/package/level-packager)
 [![Backers on Open Collective](https://opencollective.com/level/backers/badge.svg?color=orange)](#backers)
