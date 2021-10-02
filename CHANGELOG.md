@@ -1,8 +1,8 @@
 # Changelog
 
-_**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md)._
-
 ## [6.0.0] - 2021-04-17
+
+_If you are upgrading: please see [`UPGRADING.md`](UPGRADING.md)._
 
 ### Changed
 
@@ -67,6 +67,8 @@ _**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md)._
 
 ## [5.0.0] - 2018-12-27
 
+_If you are upgrading: please see [`UPGRADING.md`](UPGRADING.md)._
+
 ### Changed
 
 - Upgrade `encoding-down` from `~5.0.0` to `^6.0.0` ([#80](https://github.com/Level/packager/issues/80), [#81](https://github.com/Level/packager/issues/81)) ([**@vweevers**](https://github.com/vweevers))
@@ -99,6 +101,8 @@ _**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md)._
 
 ## [4.0.0] - 2018-06-13
 
+_If you are upgrading: please see [`UPGRADING.md`](UPGRADING.md)._
+
 ### Changed
 
 - Rewrite `test.js` to test `level-packager` api ([**@ralphtheninja**](https://github.com/ralphtheninja))
@@ -114,6 +118,8 @@ _**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md)._
 - Remove `.jshintrc` ([**@ralphtheninja**](https://github.com/ralphtheninja))
 
 ## [3.0.0] - 2018-05-23
+
+_If you are upgrading: please see [`UPGRADING.md`](UPGRADING.md)._
 
 ### Added
 
@@ -347,9 +353,9 @@ _**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md)._
 
 ## [0.17.0] - 2013-10-09
 
-:seedling: Initial release.
+_This changelog is ordered by semver-version, but the first few releases here did not use semver-valid tags._
 
-**Historical Note** This changelog is ordered by semver-version, but the first few releases here did not use semver-valid tags.
+:seedling: Initial release.
 
 ## [0.17.0-5] - 2013-10-12
 
@@ -389,78 +395,78 @@ _**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md)._
 
 - Remove `tape` from devDependencies, allow callers to pass in custom test function ([**@rvagg**](https://github.com/rvagg))
 
-[6.0.0]: https://github.com/Level/packager/compare/v5.1.1...v6.0.0
+[6.0.0]: https://github.com/Level/packager/releases/tag/v6.0.0
 
-[5.1.1]: https://github.com/Level/packager/compare/v5.1.0...v5.1.1
+[5.1.1]: https://github.com/Level/packager/releases/tag/v5.1.1
 
-[5.1.0]: https://github.com/Level/packager/compare/v5.0.3...v5.1.0
+[5.1.0]: https://github.com/Level/packager/releases/tag/v5.1.0
 
-[5.0.3]: https://github.com/Level/packager/compare/v5.0.2...v5.0.3
+[5.0.3]: https://github.com/Level/packager/releases/tag/v5.0.3
 
-[5.0.2]: https://github.com/Level/packager/compare/v5.0.1...v5.0.2
+[5.0.2]: https://github.com/Level/packager/releases/tag/v5.0.2
 
-[5.0.1]: https://github.com/Level/packager/compare/v5.0.0...v5.0.1
+[5.0.1]: https://github.com/Level/packager/releases/tag/v5.0.1
 
-[5.0.0]: https://github.com/Level/packager/compare/v4.0.1...v5.0.0
+[5.0.0]: https://github.com/Level/packager/releases/tag/v5.0.0
 
-[4.0.1]: https://github.com/Level/packager/compare/v4.0.0...v4.0.1
+[4.0.1]: https://github.com/Level/packager/releases/tag/v4.0.1
 
-[4.0.0]: https://github.com/Level/packager/compare/v3.1.0...v4.0.0
+[4.0.0]: https://github.com/Level/packager/releases/tag/v4.0.0
 
-[3.1.0]: https://github.com/Level/packager/compare/v3.0.0...v3.1.0
+[3.1.0]: https://github.com/Level/packager/releases/tag/v3.1.0
 
-[3.0.0]: https://github.com/Level/packager/compare/v2.1.1...v3.0.0
+[3.0.0]: https://github.com/Level/packager/releases/tag/v3.0.0
 
-[2.1.1]: https://github.com/Level/packager/compare/v2.1.0...v2.1.1
+[2.1.1]: https://github.com/Level/packager/releases/tag/v2.1.1
 
-[2.1.0]: https://github.com/Level/packager/compare/v2.0.2...v2.1.0
+[2.1.0]: https://github.com/Level/packager/releases/tag/v2.1.0
 
-[2.0.2]: https://github.com/Level/packager/compare/v2.0.1...v2.0.2
+[2.0.2]: https://github.com/Level/packager/releases/tag/v2.0.2
 
-[2.0.1]: https://github.com/Level/packager/compare/v2.0.0...v2.0.1
+[2.0.1]: https://github.com/Level/packager/releases/tag/v2.0.1
 
-[2.0.0]: https://github.com/Level/packager/compare/v2.0.0-rc3...v2.0.0
+[2.0.0]: https://github.com/Level/packager/releases/tag/v2.0.0
 
-[2.0.0-rc3]: https://github.com/Level/packager/compare/v2.0.0-rc2...v2.0.0-rc3
+[2.0.0-rc3]: https://github.com/Level/packager/releases/tag/v2.0.0-rc3
 
-[2.0.0-rc2]: https://github.com/Level/packager/compare/v2.0.0-rc1...v2.0.0-rc2
+[2.0.0-rc2]: https://github.com/Level/packager/releases/tag/v2.0.0-rc2
 
-[2.0.0-rc1]: https://github.com/Level/packager/compare/v1.2.1...v2.0.0-rc1
+[2.0.0-rc1]: https://github.com/Level/packager/releases/tag/v2.0.0-rc1
 
-[1.2.1]: https://github.com/Level/packager/compare/v1.2.0...v1.2.1
+[1.2.1]: https://github.com/Level/packager/releases/tag/v1.2.1
 
-[1.2.0]: https://github.com/Level/packager/compare/v1.1.0...v1.2.0
+[1.2.0]: https://github.com/Level/packager/releases/tag/v1.2.0
 
-[1.1.0]: https://github.com/Level/packager/compare/v1.0.0...v1.1.0
+[1.1.0]: https://github.com/Level/packager/releases/tag/v1.1.0
 
-[1.0.0]: https://github.com/Level/packager/compare/v1.0.0-0...v1.0.0
+[1.0.0]: https://github.com/Level/packager/releases/tag/v1.0.0
 
-[1.0.0-0]: https://github.com/Level/packager/compare/v0.19.7...v1.0.0-0
+[1.0.0-0]: https://github.com/Level/packager/releases/tag/v1.0.0-0
 
-[0.19.7]: https://github.com/Level/packager/compare/v0.19.6...v0.19.7
+[0.19.7]: https://github.com/Level/packager/releases/tag/v0.19.7
 
-[0.19.6]: https://github.com/Level/packager/compare/v0.19.5...v0.19.6
+[0.19.6]: https://github.com/Level/packager/releases/tag/v0.19.6
 
-[0.19.5]: https://github.com/Level/packager/compare/v0.19.4...v0.19.5
+[0.19.5]: https://github.com/Level/packager/releases/tag/v0.19.5
 
-[0.19.4]: https://github.com/Level/packager/compare/v0.19.3...v0.19.4
+[0.19.4]: https://github.com/Level/packager/releases/tag/v0.19.4
 
-[0.19.3]: https://github.com/Level/packager/compare/v0.19.2...v0.19.3
+[0.19.3]: https://github.com/Level/packager/releases/tag/v0.19.3
 
-[0.19.2]: https://github.com/Level/packager/compare/v0.19.1...v0.19.2
+[0.19.2]: https://github.com/Level/packager/releases/tag/v0.19.2
 
-[0.19.1]: https://github.com/Level/packager/compare/v0.19.0...v0.19.1
+[0.19.1]: https://github.com/Level/packager/releases/tag/v0.19.1
 
-[0.19.0]: https://github.com/Level/packager/compare/0.18.0...v0.19.0
+[0.19.0]: https://github.com/Level/packager/releases/tag/v0.19.0
 
-[0.18.0]: https://github.com/Level/packager/compare/0.17.0...0.18.0
+[0.18.0]: https://github.com/Level/packager/releases/tag/0.18.0
 
-[0.17.0]: https://github.com/Level/packager/compare/0.17.0-5...0.17.0
+[0.17.0]: https://github.com/Level/packager/releases/tag/0.17.0
 
-[0.17.0-5]: https://github.com/Level/packager/compare/0.17.0-4...0.17.0-5
+[0.17.0-5]: https://github.com/Level/packager/releases/tag/0.17.0-5
 
-[0.17.0-4]: https://github.com/Level/packager/compare/0.17.0-3...0.17.0-4
+[0.17.0-4]: https://github.com/Level/packager/releases/tag/0.17.0-4
 
-[0.17.0-3]: https://github.com/Level/packager/compare/0.17.0-2...0.17.0-3
+[0.17.0-3]: https://github.com/Level/packager/releases/tag/0.17.0-3
 
-[0.17.0-2]: https://github.com/Level/packager/compare/0.17.0-1...0.17.0-2
+[0.17.0-2]: https://github.com/Level/packager/releases/tag/0.17.0-2
