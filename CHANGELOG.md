@@ -1,5 +1,11 @@
 # Changelog
 
+## [6.0.1] - 2021-10-02
+
+### Fixed
+
+- Bump `levelup` and `encoding-down` to prevent dedupe ([`d3a8fc2`](https://github.com/Level/packager/commit/d3a8fc2)) (Vincent Weevers)
+
 ## [6.0.0] - 2021-04-17
 
 _If you are upgrading: please see [`UPGRADING.md`](UPGRADING.md)._
@@ -389,11 +395,13 @@ _This changelog is ordered by semver-version, but the first few releases here di
 
 - README: `level` -> `level-packager` ([**@rvagg**](https://github.com/rvagg))
 
-## 0.17.0-1 - 2013-10-09
+## [0.17.0-1] - 2013-10-09
 
 ### Removed
 
 - Remove `tape` from devDependencies, allow callers to pass in custom test function ([**@rvagg**](https://github.com/rvagg))
+
+[6.0.1]: https://github.com/Level/packager/releases/tag/v6.0.1
 
 [6.0.0]: https://github.com/Level/packager/releases/tag/v6.0.0
 
@@ -470,3 +478,5 @@ _This changelog is ordered by semver-version, but the first few releases here di
 [0.17.0-3]: https://github.com/Level/packager/releases/tag/0.17.0-3
 
 [0.17.0-2]: https://github.com/Level/packager/releases/tag/0.17.0-2
+
+[0.17.0-1]: https://github.com/Level/packager/releases/tag/0.17.0-1

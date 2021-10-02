@@ -1,6 +1,6 @@
 {
   "name": "level-packager",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "levelup package helper for distributing with an abstract-leveldown store",
   "license": "MIT",
   "main": "level-packager.js",
