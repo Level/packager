@@ -1,6 +1,8 @@
 # level-packager
 
-> `levelup` package helper for distributing with an `abstract-leveldown` store.
+**`levelup` package helper for distributing with an `abstract-leveldown` store.**
+
+> :pushpin: This module will soon be [deprecated](https://github.com/Level/community/issues/113).
 
 [![level badge][level-badge]](https://github.com/Level/awesome)
 [![npm](https://img.shields.io/npm/v/level-packager.svg)](https://www.npmjs.com/package/level-packager)
